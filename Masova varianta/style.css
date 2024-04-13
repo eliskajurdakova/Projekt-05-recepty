@@ -37,7 +37,14 @@ body {
 /* ------------------------------- */
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
-
+.recept {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    /* display: flex; */
+    /* flex-direction: column;  */
+    /* row-gap: 3px; */
+}
 
 .hlavni_recept{
     background-image: url(images/burger.jpg);
@@ -48,6 +55,9 @@ body {
     padding: 10px;
     border: 1px solid white;
     box-sizing: border-box;
+    position: relative;
+    
+    
 }
 
 .recept_2{
@@ -87,20 +97,15 @@ body {
 }
 
 
-.recept {
-    font-size: 14px;
-    font-weight: 400;
-    color: white;
-    display: flex;
-    flex-direction: column; 
-    /* row-gap: 3px; */
-}
+
 
 
 
 h1 {
     font-size: 28px;
     font-weight: 800;
+    position: absolute;
+    bottom: 10px;
 }
 
 h2 {
@@ -119,18 +124,12 @@ h2 {
     justify-content: space-between
 }
 
-
-.hlavni_recept{
-    position: relative;
-}
-
-h1 {
-    position: absolute;
-    bottom: 10px;
-}
-
-
 @media (min-width: 540px){
+    .recept{ 
+        display: flex;
+        flex-direction: column;
+    }
+
     h1{
         font-size: 36px;
     }
@@ -174,6 +173,7 @@ h1 {
     .recept_5 {
         min-height: 200px;
         padding: 20px;
+        display: flex;
         /* flex-grow: 1; */  
     }
 
@@ -181,5 +181,12 @@ h1 {
         display: flex;
         flex-direction: row;
         
+    }
+
+    .text_asijska,
+    .text_drubez,
+    .text_omacky,
+    .text_grilovani{
+        flex-grow: 1;
     }
 }
