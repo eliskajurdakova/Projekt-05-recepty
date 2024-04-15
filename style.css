@@ -1,0 +1,192 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+.recept {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    /* display: flex; */
+    /* flex-direction: column;  */
+    /* row-gap: 3px; */
+}
+
+.hlavni_recept{
+    background-image: url(images/burger.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 200px;
+    padding: 10px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    position: relative;
+    
+    
+}
+
+.recept_2{
+    background-image: url(images/sushi.jpg); 
+}
+.recept_3{
+    background-image: url(images/kure.jpg); 
+}
+.recept_4{
+    background-image: url(images/rajcata.jpg);  
+}
+.recept_5{
+    background-image: url(images/grilovani.jpg);  
+}
+
+
+.recept_2,
+.recept_3,
+.recept_4,
+.recept_5 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 90px;
+    padding: 10px;
+    position: relative;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+.nigiri,
+.pecene,
+.chili,
+.zahradni{
+    position: absolute;
+    bottom: 10px;
+}
+
+
+
+
+
+
+h1 {
+    font-size: 28px;
+    font-weight: 800;
+    position: absolute;
+    bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+.text_burger,
+.text_asijska,
+.text_drubez,
+.text_omacky,
+.text_grilovani
+{
+    display: flex;
+    justify-content: space-between
+}
+
+@media (min-width: 540px){
+    .recept{ 
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 22px;
+    }
+    .hlavni_recept{
+        min-height: 250px;
+        padding: 20px;   
+    }
+    .recept_2,
+    .recept_3,
+    .recept_4,
+    .recept_5 {
+        min-height: 150px;
+        padding: 20px; 
+        flex-basis: 50%;  
+    }
+
+    .male_menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 960px){
+    h1{
+        font-size: 48px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .hlavni_recept{
+        min-height: 400px;
+        padding: 20px;
+        flex-grow: 1;
+    }
+    .recept_2,
+    .recept_3,
+    .recept_4,
+    .recept_5 {
+        min-height: 200px;
+        padding: 20px;
+        display: flex;
+        /* flex-grow: 1; */  
+    }
+
+    .recept{
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .text_asijska,
+    .text_drubez,
+    .text_omacky,
+    .text_grilovani{
+        flex-grow: 1;
+    }
+}
